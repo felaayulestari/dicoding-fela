@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../dbHelper.dart';
 
-void main() => runApp(Detail());
-
 class Detail extends StatefulWidget {
   final Product product;
   final user;
@@ -29,9 +27,6 @@ class _DetailState extends State<Detail> {
   //instansiasi obj dbHelper
   DbHelper dbHelper = DbHelper();
 
-  var nama;
-  var partisipan ;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -49,6 +44,16 @@ class _DetailState extends State<Detail> {
           //padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
+              Container(
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(5),
+                child: Text(
+                  'Halo ' + widget.user + ' apakah ini produk incaranmu? Jika iya segera pesan sebelum kehabisan. Jika tidak yuk cari produk yang lain.',
+                  style: TextStyle(fontSize: 20, color: Colors.black),
+                  textAlign: TextAlign.center,
+                ),
+                color: Colors.blueGrey[100],
+              ),
               Column(
                 children: [
                   Container(
