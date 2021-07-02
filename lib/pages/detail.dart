@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:dicoding/models/product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../dbHelper.dart';
 
 class Detail extends StatefulWidget {
@@ -15,8 +14,6 @@ class Detail extends StatefulWidget {
 }
 
 class _DetailState extends State<Detail> {
-  //var untuk menampung object dari favorit
-  var favorit;
   //var untuk menampung tipe sub-kepribadian berdasarkan input sementara
   var data = List(26);
   //method untuk melakukan  set state / refresh
@@ -48,7 +45,7 @@ class _DetailState extends State<Detail> {
                 margin: EdgeInsets.all(20),
                 padding: EdgeInsets.all(5),
                 child: Text(
-                  'Halo ' + widget.user + ' apakah ini produk incaranmu? Jika iya segera pesan sebelum kehabisan. Jika tidak yuk cari produk yang lain.',
+                  'Halo "' + widget.user + '" apakah ini produk incaranmu? Jika iya segera pesan sebelum kehabisan. Jika tidak yuk cari produk yang lain.',
                   style: TextStyle(fontSize: 20, color: Colors.black),
                   textAlign: TextAlign.center,
                 ),
